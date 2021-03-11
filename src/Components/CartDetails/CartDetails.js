@@ -2,15 +2,14 @@ import { faClock, faFlag, faGamepad, faVenusMars} from '@fortawesome/free-solid-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import maleImg from '../images/male.png'
-import femaleImg from '../images/female.png'
-import { faFacebookSquare, faInstagramSquare, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { Link } from 'react-router-dom';
+import maleImg from '../../images/male.png'
+import femaleImg from '../../images/female.png'
+import { faFacebookSquare, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const CartDetails = () => {
     const {idLeague} = useParams();
     const [cart, setCart] = useState({});
-    const {strCountry, intFormedYear, strSport, strGender, strDescriptionEN, strDescriptionFR} = cart;
+    const {strCountry, intFormedYear, strSport, strGender, strDescriptionEN, strDescriptionFR, strFacebook, strTwitter, strYoutube, strWebsite} = cart;
     let gender;
     if (strGender === 'Male') {
         gender = maleImg;
@@ -56,11 +55,10 @@ const CartDetails = () => {
                 <p>{strDescriptionEN}</p>
                 <p>{strDescriptionFR}</p>
             </div>
-            <div className="socialIcons" style={{fontSize:'45px'}}>
-                <Link><FontAwesomeIcon icon={faInstagramSquare}/></Link>
-                <Link><FontAwesomeIcon icon={faYoutube}/></Link>
-                <Link><FontAwesomeIcon icon={faFacebookSquare}/></Link>
-                <Link><FontAwesomeIcon icon={faTwitter}/></Link>
+            <div className="socialIcons container d-flex justify-content-center" style={{fontSize:'40px'}}>
+                <a className='p-3' style={{color:"#5B06DF"}} href={strTwitter}><FontAwesomeIcon icon={faTwitter}/></a>
+                <a className='p-3' style={{color:"#5B06DF"}} href={strFacebook}><FontAwesomeIcon icon={faFacebookSquare}/></a>
+                <a className='p-3' style={{color:"#5B06DF"}} href={strYoutube}><FontAwesomeIcon icon={faYoutube}/></a>
             </div>
 
         </div>

@@ -1,12 +1,12 @@
 import './App.css';
-import Home from './Components/Home';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import NotFound from './Components/NotFound';
-import CartDetails from './Components/CartDetails';
+import Home from './Components/Home/Home';
+import NotFound from './Components/NotFound/NotFound';
+import CartDetails from './Components/CartDetails/CartDetails';
 
 function App() {
   
