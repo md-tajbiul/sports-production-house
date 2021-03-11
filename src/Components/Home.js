@@ -4,7 +4,7 @@ import LeagueCart from './LeagueCart';
 
 const Home = () => {
     const [league, setLeague] = useState([])
-  const showLeagues = league.slice(0, 15)
+  const showLeagues = league.slice(0, 12)
     useEffect(() => {
         fetch(`https://www.thesportsdb.com/api/v1/json/1/all_leagues.php`)
         .then(res => res.json())
@@ -12,15 +12,22 @@ const Home = () => {
     }, [])
     return (
         <div style={{background: '#5B06DF'}}>
-            <div className="card text-white text-center">
-                <img className="w-100 card-img" src={img1} alt=""/>
-                <div className="card-img-overlay">
-                <h1 style={{fontSize:'60px'}} className="cart-title">Hello World</h1>
+
+            <div className="card bg-dark text-white">
+                    <img src={img1} className="card-img" alt="card img"/>
+                <div className="card-img-overlay container d-flex justify-content-center align-items-center flex-column">
+                    <h1 className="card-title">Hello World</h1>
+                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
                 </div>
             </div>
-                {
-                    showLeagues.map(leagueName => <LeagueCart leagueName={leagueName}></LeagueCart>)
-                }
+            
+            <div className="container">
+                <div className="row">
+                    {
+                        showLeagues.map(leagueName => <LeagueCart leagueName={leagueName}></LeagueCart>)
+                    }
+                </div>
+            </div>
         </div>
     );
 };
