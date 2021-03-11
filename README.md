@@ -7,7 +7,7 @@
     *Here you can find many kinds of social media links of all leagues.
 
 **Website
-    *
+    *https://inspiring-saha-805455.netlify.app/
     
 **Credits
-    All rights reserved by 'Tajbiul' @2021
+    *All rights reserved by 'Tajbiul' @2021
