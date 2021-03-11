@@ -9,7 +9,7 @@ import { faFacebookSquare, faTwitter, faYoutube } from '@fortawesome/free-brands
 const CartDetails = () => {
     const {idLeague} = useParams();
     const [cart, setCart] = useState({});
-    const {strCountry, intFormedYear, strSport, strGender, strDescriptionEN, strDescriptionFR, strFacebook, strTwitter, strYoutube, strWebsite} = cart;
+    const {strCountry, intFormedYear, strSport, strGender, strDescriptionEN, strDescriptionFR, strFacebook, strTwitter, strYoutube} = cart;
     let gender;
     if (strGender === 'Male') {
         gender = maleImg;
